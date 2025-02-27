@@ -11,7 +11,7 @@
                 <element inactive_on_update="false" label="Software Engineer" value="software_engineer"/>
             </choice>
         </element>
-        <element label="Special Requirement" mandatory="true" max_length="1000" name="special_requirement" type="string"/>
+        <element label="Special Requirement" max_length="1000" name="special_requirement" type="string"/>
         <element label="Start Date" mandatory="true" max_length="100" name="start_date" type="glide_date"/>
         <element choice="3" label="Status" max_length="40" name="status" type="choice">
             <choice>
