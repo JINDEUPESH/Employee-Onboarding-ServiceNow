@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="07357335c3b31210e8fad9dc05013123" label="Check List " max_length="40" name="x_1354209_employee_check_list" type="collection">
+        <element label="Checklist Name" mandatory="true" max_length="100" name="checklist_name" type="string"/>
+        <element label="Completed" max_length="40" name="completed" type="boolean"/>
+        <element label="New Hire" max_length="32" name="new_hire" reference="x_1354209_employee_new_hire" type="reference"/>
+        <element choice="1" label="Role" mandatory="true" max_length="100" name="role" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="HR Coordinator" value="hr_coordinator"/>
+                <element inactive_on_update="false" label="IT Support Specialist" value="it_support_specialist"/>
+                <element inactive_on_update="false" label="Sales Associate" value="sales_associate"/>
+                <element inactive_on_update="false" label="Software Engineer" value="software_engineer"/>
+            </choice>
+        </element>
+        <element label="Task List" max_length="1000" name="task_list" type="string"/>
+        <index name="index">
+            <element name="new_hire"/>
+        </index>
+    </element>
+</database>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="4222f331c3b31210e8fad9dc0501313f" label="Onboarding Task" max_length="40" name="x_1354209_employee_onboarding_task" type="collection">
+        <element label="Assigned To" max_length="32" name="assigned_to" reference="sys_user" type="reference"/>
+        <element label="Due Date" mandatory="true" max_length="100" name="due_date" type="glide_date"/>
+        <element label="New Hire" max_length="32" name="new_hire" reference="x_1354209_employee_new_hire" type="reference"/>
+        <element choice="3" default="Not Started" label="Status" max_length="40" name="status" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Cancelled" value="cancelled"/>
+                <element inactive_on_update="false" label="Completed" value="completed"/>
+                <element inactive_on_update="false" label="In Progress" value="in_progress"/>
+                <element inactive_on_update="false" label="Not Started" value="not_started"/>
+                <element inactive_on_update="false" label="Pending Approval" value="pending_approval"/>
+            </choice>
+        </element>
+        <element label="Task Description" mandatory="true" max_length="1000" name="task_description" type="string"/>
+        <element label="Task Name" max_length="100" name="task_name" type="string"/>
+        <index name="index">
+            <element name="assigned_to"/>
+        </index>
+        <index name="index2">
+            <element name="new_hire"/>
+        </index>
+    </element>
+</database>

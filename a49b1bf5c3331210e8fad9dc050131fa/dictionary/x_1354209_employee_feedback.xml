@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="53c6fb75c3b31210e8fad9dc050131e2" label="Feedback" max_length="40" name="x_1354209_employee_feedback" type="collection">
+        <element label="Comments" max_length="1000" name="comments" type="string"/>
+        <element label="Employee" max_length="32" name="employee" reference="x_1354209_employee_new_hire" type="reference"/>
+        <element label="Feedback Date" mandatory="true" max_length="40" name="feedback_date" type="glide_date"/>
+        <element label="Rating" mandatory="true" max_length="40" name="rating" type="integer"/>
+        <index name="index">
+            <element name="employee"/>
+        </index>
+    </element>
+</database>
